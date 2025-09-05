@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mohamed Mostafa Awad - AI & Embedded Systems Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+    body {
+      font-family: 'Roboto Mono', monospace;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #e0e6f1;
+      scroll-behavior: smooth;
+      min-height: 100vh;
+    }
+    a {
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #fbbf24;
+      text-decoration: none;
+    }
+    header {
+      background: rgba(15, 32, 39, 0.85);
+      backdrop-filter: saturate(180%) blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #2c5364;
+    }
+    nav a {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #e0e6f1;
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+    }
+    nav a.active, nav a:hover {
+      background: #fbbf24;
+      color: #0f2027;
+      box-shadow: 0 4px 15px rgba(251, 191, 36, 0.6);
+    }
+    section {
+      background: rgba(44, 83, 100, 0.7);
+      border-radius: 1rem;
+      box-shadow: 0 8px 32px 0 rgba(15, 32, 39, 0.7);
+      backdrop-filter: blur(8.5px);
+      padding: 3rem 2rem;
+      margin-bottom: 3rem;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h2 {
+      font-weight: 700;
+      font-size: 2.75rem;
+      margin-bottom: 1.5rem;
+      color: #fbbf24;
+      text-shadow: 0 0 8px rgba(251, 191, 36, 0.8);
+      text-align: center;
+      letter-spacing: 0.05em;
+    }
+    h3 {
+      font-weight: 600;
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #fbbf24;
+    }
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #d1d9e6;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 1.25rem;
+    }
+    .btn-primary {
+      background: #fbbf24;
+      color: #0f2027;
+      font-weight: 700;
+      border-radius: 9999px;
+      padding: 0.75rem 2rem;
+      box-shadow: 0 6px 20px rgba(251, 191, 36, 0.6);
+      transition: all 0.3s ease;
+      display: inline-block;
+      text-align: center;
+      margin-top: 1rem;
+      user-select: none;
+    }
+    .btn-primary:hover {
+      background: #d19e1a;
+      box-shadow: 0 8px 30px rgba(209, 158, 26, 0.8);
+      color: #fff;
+      text-decoration: none;
+    }
+    .profile-img {
+      border-radius: 50%;
+      border: 4px solid #fbbf24;
+      box-shadow: 0 0 25px #fbbf24;
+      max-width: 180px;
+      margin: 0 auto 1.5rem;
+      display: block;
+    }
+    .project-card {
+      background: rgba(15, 32, 39, 0.85);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 8px 32px 0 rgba(251, 191, 36, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 40px 0 rgba(251, 191, 36, 0.6);
+    }
+    .project-card img {
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+      object-fit: cover;
+      max-height: 160px;
+      width: 100%;
+    }
+    footer {
+      background: #0f2027;
+      text-align: center;
+      padding: 1rem 0;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: #fbbf24;
+      user-select: none;
+    }
+    /* Responsive */
+    @media (min-width: 768px) {
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+      }
+      .grid-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
+    }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <header>
+    <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
+      <h1 class="text-4xl font-extrabold tracking-wide select-none">Mohamed Mostafa Awad</h1>
+      <nav class="mt-4 md:mt-0 space-x-4">
+        <a href="#landing" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#education">Education</a>
+        <a href="#why-me">Why Me?</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+
+   <!-- Landing / Cover -->
+<section id="landing" class="text-center mt-12">
+  <img src="mypic.jpg" alt="Mohamed Mostafa Awad" 
+       class="mx-auto w-48 h-48 object-cover rounded-lg shadow-lg" />
+  
+  <h2 class="mt-6 text-2xl font-semibold">Software | AI & Data | Machine Learning Engineer</h2>
+  
+  <p class="mt-4 max-w-xl mx-auto text-lg leading-relaxed">
+    "From building AI-driven applications to designing embedded systems, I turn ideas into practical, real-world solutions."
+  </p>
+  <p class="mt-4 max-w-xl mx-auto text-lg leading-relaxed">
+    I am a Computer Engineering student with hands-on experience in software development, data analysis, and embedded systems. Skilled in Java, Python, C++, SQL, and Verilog, with impactful projects including AI-based games, database systems, and hardware solutions. Recognized for problem-solving, teamwork, and adaptability, passionate about delivering scalable and user-focused systems.
+  </p>
+  
+  <a href="#contact" class="btn-primary mt-6 inline-block">Let's Build Something Great Together</a>
+</section>
+
+
+    <!-- About Me -->
+    <section id="about" class="mt-20">
+      <h2>About Me</h2>
+      <p class="max-w-3xl mx-auto text-lg leading-relaxed">
+        I am Mohamed Mostafa Awad, a passionate Computer Engineering student based in Alexandria, Egypt. I specialize in AI-driven software and embedded systems development, combining strong programming skills with practical hardware knowledge to deliver innovative solutions.
+      </p>
+      <p class="mt-4 max-w-3xl mx-auto text-lg leading-relaxed">
+        Contact me anytime via email or phone for freelance projects, collaborations, or exciting opportunities.
+      </p>
+      <div class="mt-6 max-w-3xl mx-auto text-lg space-y-2">
+        <p><strong>📍 Location:</strong> Egypt, Alexandria</p>
+        <p><strong>📧 Email:</strong> <a href="mailto:mohamed.fargelka71@gmail.com" class="underline">mohamed.fargelka71@gmail.com</a></p>
+        <p><strong>📱 Phone:</strong> 01224012641</p>
+        <p><strong>🔗 LinkedIn:</strong> <a href="https://linkedin.com/in/muhammad-mustafa-098533344" target="_blank" class="underline">linkedin.com/in/muhammad-mustafa-098533344</a></p>
+        <p><strong>💻 GitHub:</strong> <a href="https://github.com/mufargella" target="_blank" class="underline">github.com/mufargella</a></p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="mt-20">
+      <h2>Skills</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10 max-w-5xl mx-auto">
+        <div>
+          <h3>Technical Skills</h3>
+          <ul class="list-disc list-inside space-y-2">
+            <li>Java, Python, C++, SQL, Verilog</li>
+            <li>Data Analysis (Pandas, NumPy, Matplotlib, Seaborn)</li>
+            <li>Database Design & SQL Queries</li>
+            <li>Object-Oriented Programming (Java, C++)</li>
+            <li>Embedded Systems (Verilog, FPGA)</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Soft Skills</h3>
+          <ul class="list-disc list-inside space-y-2">
+            <li>Problem Solving & Critical Thinking</li>
+            <li>Teamwork & Communication</li>
+            <li>Time Management & Organization</li>
+            <li>Adaptability & Self-Learning</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Languages</h3>
+          <ul class="list-disc list-inside space-y-2">
+            <li>Arabic: Native</li>
+            <li>English: Intermediate</li>
+            <li>Spanish: Beginner</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+   <!-- Projects -->
+<section id="projects" class="mt-20">
+  <h2>Projects</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 max-w-6xl mx-auto">
+    
+    <!-- Cafeteria -->
+    <article class="project-card">
+      <img src="Cafeteria Order & Loyalty System.jpeg" alt="University Cafeteria Order & Loyalty System" />
+      <h3>University Cafeteria Order & Loyalty System</h3>
+      <p>Java-based app digitizing cafeteria operations with student login, menu management, orders, loyalty points, staff dashboard, and reporting.</p>
+      <p class="mt-2 text-yellow-400 font-semibold">Tools: Java, JavaFX, JDBC, OOP Design</p>
+      <a href="https://github.com/mufargella/University_Cafeteria-Order-Loyalty_System" target="_blank" class="btn-primary mt-4 self-start">View Project</a>
+    </article>
+
+    <!-- Data Analysis -->
+    <article class="project-card">
+      <img src="Shopping Trends Data Analysis.jpeg" alt="Shopping Trends Data Analysis" />
+      <h3>Shopping Trends Data Analysis</h3>
+      <p>Analyzed customer shopping patterns using data cleaning, exploratory data analysis, and visualizations to deliver consumer behavior insights.</p>
+      <p class="mt-2 text-yellow-400 font-semibold">Tools: Python, Pandas, NumPy, Matplotlib, Seaborn, Missingno</p>
+      <a href="https://github.com/mufargella/shopping_trends_DataAnlysis" target="_blank" class="btn-primary mt-4 self-start">View Project</a>
+    </article>
+
+    <!-- AI Detective -->
+    <article class="project-card">
+      <img src="AI Detective Game.jpeg" alt="AI Detective Game" />
+      <h3>AI Detective Game</h3>
+      <p>Logic-based 5x5 grid game where AI uses BFS, DFS, A*, and Greedy Search to solve mysteries by collecting clues and questioning suspects.</p>
+      <p class="mt-2 text-yellow-400 font-semibold">Tools: Python, Search Algorithms, GUI</p>
+      <a href="https://github.com/mufargella/AI_Detective_GameProject" target="_blank" class="btn-primary mt-4 self-start">View Project</a>
+    </article>
+
+    <!-- Numerical Methods -->
+    <article class="project-card">
+      <img src="Numerical Methods Toolkit.jpeg" alt="Numerical Methods Toolkit" />
+      <h3>Numerical Methods Toolkit</h3>
+      <p>Java algorithms for equation solving (Newton-Raphson), ODEs (Runge-Kutta), and optimization (Power Law Regression).</p>
+      <p class="mt-2 text-yellow-400 font-semibold">Tools: Java, Algorithm Design, Numerical Analysis</p>
+      <a href="https://github.com/mufargella/Numerical--project" target="_blank" class="btn-primary mt-4 self-start">View Project</a>
+    </article>
+
+    <!-- Smart Parking -->
+    <article class="project-card">
+      <img src="Smart Parking System.jpeg" alt="Smart Parking System (ASPS™)" />
+      <h3>Smart Parking System (ASPS™)</h3>
+      <p>Verilog system with IR sensors to detect cars, calculate costs, and display info on 7-segment display. FPGA-ready design.</p>
+      <p class="mt-2 text-yellow-400 font-semibold">Tools: Verilog, IR Sensors, Embedded Systems</p>
+      <a href="https://github.com/mufargella/Alamein_Mall_Smart_Parking_System-" target="_blank" class="btn-primary mt-4 self-start">View Project</a>
+    </article>
+
+    <!-- Field Training -->
+    <article class="project-card">
+      <img src="Field Training Management System.jpeg" alt="Field Training Management System" />
+      <h3>Field Training Management System</h3>
+      <p>Database system to manage internships, roles, and reports with normalized schemas and SQL queries.</p>
+      <p class="mt-2 text-yellow-400 font-semibold">Tools: SQL, ERD, DDL/DML</p>
+      <a href="https://github.com/mufargella/DataStax_SQl_Project" target="_blank" class="btn-primary mt-4 self-start">View Project</a>
+    </article>
+
+    <!-- Hospital -->
+    <article class="project-card">
+      <img src="Hospital Patient Management System.png" alt="Hospital Patient Management System" />
+      <h3>Hospital Patient Management System</h3>
+      <p>GUI app to manage patient records and hospital appointments efficiently with an intuitive interface.</p>
+      <p class="mt-2 text-yellow-400 font-semibold">Tools: Java, JavaFX</p>
+      <a href="https://github.com/mufargella/DataStructureProject" target="_blank" class="btn-primary mt-4 self-start">View Project</a>
+    </article>
+
+    <!-- Transportation -->
+    <article class="project-card">
+      <img src="Transportation Company System.jpeg" alt="Transportation Company System" />
+      <h3>Transportation Company System</h3>
+      <p>File-based Java app with authentication, ticket booking, trip scheduling, and data sorting using GUI.</p>
+      <p class="mt-2 text-yellow-400 font-semibold">Tools: Java, JavaFX</p>
+      <a href="https://github.com/mufargella/OOPproject" target="_blank" class="btn-primary mt-4 self-start">View Project</a>
+    </article>
+
+    <!-- Digital Clock -->
+    <article class="project-card">
+      <img src="Digital Clock.png" alt="Digital Clock" />
+      <h3>Digital Clock</h3>
+      <p>Digital clock displaying hours, minutes, and seconds with optional alarm and stopwatch features.</p>
+      <p class="mt-2 text-yellow-400 font-semibold">Tools: Hardware Components</p>
+      <a href="https://github.com/mufargella/Digital-clock" target="_blank" class="btn-primary mt-4 self-start">View Project</a>
+    </article>
+
+    <!-- Math 2 -->
+    <article class="project-card">
+      <img src="Math 2 Project.jpeg" alt="Math 2 Project" />
+      <h3>Math 2 Project</h3>
+      <p>Java toolkit for numerical integration with reduction formulas for trigonometric integrals, providing step-by-step decomposition.</p>
+      <p class="mt-2 text-yellow-400 font-semibold">Tools: Java, Recursive Simplification, Numerical Analysis</p>
+      <a href="https://github.com/mufargella/Math2_Project" target="_blank" class="btn-primary mt-4 self-start">View Project</a>
+    </article>
+
+  </div>
+</section>
+
+
+    <!-- Services -->
+    <section id="services" class="mt-20">
+      <h2>Services I Offer</h2>
+      <ul class="list-disc list-inside space-y-3 text-lg max-w-3xl mx-auto mt-6">
+        <li>AI & Machine Learning Model Development</li>
+        <li>Data Analysis & Visualization</li>
+        <li>Database Design & Management</li>
+        <li>Software Development (Java, Python, C++)</li>
+        <li>Embedded Systems Design & FPGA Programming</li>
+      </ul>
+    </section>
+
+   <!-- Education -->
+<section id="education" class="mt-20">
+  <h2>Education & Certifications</h2>
+  
+  <article class="mt-6 max-w-3xl mx-auto">
+    <h3>Bachelor of Computer Engineering</h3>
+    <p class="text-yellow-400 font-semibold">
+      Alamein International University (Expected July 2028) | GPA: 3.8 / 4.0
+    </p>
+  </article>
+  
+  <article class="mt-6 max-w-3xl mx-auto">
+    <h3>Selected Courses & Certifications</h3>
+    <ul class="list-disc list-inside space-y-2 max-h-96 overflow-y-auto pr-4 text-lg mt-3">
+      <li>Core Java Programming – Mahara-Tech (8 hrs)</li>
+      <li>Object-Oriented Programming with Java – Coursera (17 hrs)</li>
+      <li>Java Database Connectivity (JDBC) – Mahara-Tech (1 hr)</li>
+      <li>Comprehensive Guide to JavaFX Essentials – Mahara-Tech (2 hrs)</li>
+      <li>Relational Database Systems – Coursera (15 hrs)</li>
+      <li>Introduction to Databases – Meta/Coursera (27 hrs)</li>
+      <li>Programming for Everybody (Python) – Coursera (18 hrs)</li>
+      <li>Ordered Data Structures – Coursera (18 hrs)</li>
+      <li>Introduction to Probability and Data with R – Coursera (14 hrs)</li>
+      <li>Competitive Programming – Coach Academy</li>
+    </ul>
+  </article>
+</section>
+
+
+    <!-- Why Me -->
+    <section id="why-me" class="mt-20 bg-yellow-400 bg-opacity-20 p-8 rounded-lg shadow-lg max-w-4xl mx-auto text-center text-gray-900">
+      <h2>Why Choose Me?</h2>
+      <p class="text-lg leading-relaxed max-w-3xl mx-auto mt-4">
+        I don’t just write code — I deliver smart, scalable, and user-focused solutions that help your business grow.
+        By choosing me, you get a reliable partner who understands your goals, solves problems efficiently, adapts to new tools, and collaborates closely to ensure every solution fits your vision.
+        In short: I combine technical expertise, clear communication, and a future-focused mindset to help you achieve results faster and smarter.
+      </p>
+    </section>
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Section</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="bg-slate-800 text-white flex flex-col items-center justify-center min-h-screen">
+
+  <!-- Contact -->
+  <section id="contact" class="mt-20 max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-4 text-purple-500 drop-shadow-lg">Contact Me</h2>
+    <p class="text-lg mb-8 text-gray-300">
+      Let's build something great together! Reach out via:
+    </p>
+
+    <div class="flex justify-center gap-6">
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/muhammad-mustafa-098533344/" target="_blank" 
+         class="w-14 h-14 flex items-center justify-center rounded-full bg-purple-600 text-white text-2xl shadow-lg hover:scale-110 hover:bg-purple-700 transition duration-300">
+        <i class="fab fa-linkedin"></i>
+      </a>
+
+      <!-- GitHub -->
+      <a href="https://github.com/mufargella" target="_blank" 
+         class="w-14 h-14 flex items-center justify-center rounded-full bg-purple-600 text-white text-2xl shadow-lg hover:scale-110 hover:bg-purple-700 transition duration-300">
+        <i class="fab fa-github"></i>
+      </a>
+
+      <!-- Email -->
+      <a href="mailto:mohamed.fargelka71@gmail.com" 
+         class="w-14 h-14 flex items-center justify-center rounded-full bg-purple-600 text-white text-2xl shadow-lg hover:scale-110 hover:bg-purple-700 transition duration-300">
+        <i class="fas fa-envelope"></i>
+      </a>
+
+      <!-- WhatsApp -->
+<a href="https://wa.me/201224012641" target="_blank" 
+   class="w-14 h-14 flex items-center justify-center rounded-full bg-purple-600 text-white text-2xl shadow-lg hover:scale-110 hover:bg-purple-700 transition duration-300">
+  <i class="fab fa-whatsapp"></i>
+</a>
+    </div>
+  </section>
+
+</body>
+</html>
